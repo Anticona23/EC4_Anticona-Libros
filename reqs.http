@@ -1,23 +1,22 @@
-@server = http://localhost:8080
+@server = https://effective-fishstick-qw57v4j76xxf497j-8080.app.github.dev
 ###
-GET {{server}}/api/instrumentos/2
+GET {{server}}/api/libros/2
 ###
-POST {{server}}/api/instrumentos
+POST {{server}}/api/libros
 Content-Type: application/json
 
-{"nombre": "Quena", "categoria": "Viento", "descripcion": "Como una flauta"}
+{"nombre": "Quena", "año": "Viento", "editorial": "Como una flauta"}
 ###
-GET {{server}}/api/musicos
+GET {{server}}/api/autores
 ###
-POST {{server}}/api/musicos
+POST {{server}}/api/autores
 Content-Type: application/json
 
 {"nombre": "Joaquín"}
 ###
-GET {{server}}/api/bandas
+GET {{server}}/api/bibliotecas
 ###
-GET {{server}}/api/bandas/1
+GET {{server}}/api/bibliotecas/1
+
 ###
-GET {{server}}/api/bandas/1/formacion
-###
-GET {{server}}/api/integrantes
+GET {{server}}/api/detalles

@@ -28,31 +28,31 @@ public class DatabaseLoader implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 
-		this.repositoryI.save(new Libro("Linea Blanca", "blanco", "Mabe"));
-		this.repositoryI.save(new Libro("Computo","Gris","Asus"));
-		this.repositoryI.save(new Libro("Zapatillas","Negro","Adidas"));
+		this.repositoryI.save(new Libro("Cien años de soledad", "1967", "Editorial Agilar"));
+		this.repositoryI.save(new Libro("Harry Potter","1997","Editorial Santilla"));
+		this.repositoryI.save(new Libro("Romeo y Julieta","1597","Editorial Alba"));
 
-		Libro iVoz = new Libro("Perfume","Viento",".");
-		this.repositoryI.save(iVoz);
 
-		Libro iGuitarraElectrica = new Libro("Guitarra Electrica","Electrónico", ".");
-		this.repositoryI.save(iGuitarraElectrica);
+		this.repositoryM.save(new Autor("Mario Vargas Llosa"));
 
-		this.repositoryI.save(new Libro("Batería","Percusión","."));
 
-		this.repositoryM.save(new Autor("Lavadora"));
+		Autor mHarper = new Autor("Harper Lee");
+		this.repositoryM.save(mHarper);
 
-		Autor mLaptop = new Autor("Laptop");
-		this.repositoryM.save(mLaptop);
+		Libro iPaz = new Libro("Gerra y Paz","1869","Editorial Santilla");
+		this.repositoryI.save(iPaz);
 
-		Autor mCocina = new Autor("Cocina");
-		this.repositoryM.save(mCocina);
+		Autor mTolkien = new Autor("Hernest Tolkine");
+		this.repositoryM.save(mTolkien);
 
-		Biblioteca bQueen = new Biblioteca("Queen");
-		this.repositoryB.save(bQueen);
+		Libro iRebelion = new Libro("Rebelion de Atlas","1957", "Editorial Markes");
+		this.repositoryI.save(iRebelion);
 
-		this.repositoryN.save(new Detalle(bQueen, mLaptop, iVoz));
-		this.repositoryN.save(new Detalle(bQueen, mCocina, iGuitarraElectrica));
+		Biblioteca bIdat = new Biblioteca("Biblioteca Idat");
+		this.repositoryB.save(bIdat);
+
+		this.repositoryN.save(new Detalle(bIdat, mHarper, iPaz));
+		this.repositoryN.save(new Detalle(bIdat, mTolkien, iRebelion));
 
 
 	}
