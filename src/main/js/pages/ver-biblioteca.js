@@ -37,6 +37,7 @@ const VerBibliotecaPage = () => {
             <hr />
 
             <h2>Formación</h2>
+
             <table border="1">
                 <thead>
                     <tr>
@@ -44,8 +45,8 @@ const VerBibliotecaPage = () => {
                         <th>Libro</th>
                     </tr>
                 </thead>
-                <tbody>
 
+                <tbody>
                     {detalles.map(detalle=>{
                         return(
                             <tr key={detalle.ID}>
@@ -54,14 +55,13 @@ const VerBibliotecaPage = () => {
                             </tr>
                         )
                     })}
-
                 </tbody>
 
             </table>
 
             <hr />
             <Link to={`/ver-biblioteca/${id}/nuevo-detalle`}>Nuevo Detalle</Link> |
-            <Link to="/">Volver</Link>
+            <Link to="/ver-biblioteca">Volver</Link>
         </>
     )
 

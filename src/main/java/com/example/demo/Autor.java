@@ -38,7 +38,7 @@ public class Autor {
 
 	@Override
 	public String toString() {
-		return "Producto{" +
+		return "Autor{" +
 			"id=" + id +
 			", nombre='" + nombre + '\'' +
 			'}';

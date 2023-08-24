@@ -41345,7 +41345,7 @@ var NuevoDetallePage = function NuevoDetallePage() {
     setIdAutor = _useState6[1];
   var _useState7 = useState(''),
     _useState8 = _slicedToArray(_useState7, 2),
-    ifLibro = _useState8[0],
+    idLibro = _useState8[0],
     setIdLibro = _useState8[1];
   var handleSubmit = function handleSubmit(evento) {
     evento.preventDefault();
@@ -41353,9 +41353,9 @@ var NuevoDetallePage = function NuevoDetallePage() {
       method: 'POST',
       path: '/api/detalles',
       entity: {
-        banda: 'http://localhost:8080/api/bandas/' + id,
+        biblioteca: 'http://localhost:8080/api/bibliotecas/' + id,
         autor: 'http://localhost:8080/api/autores/' + idAutor,
-        libro: 'http://localhost:8080/api/libros/' + ifLibro
+        libro: 'http://localhost:8080/api/libros/' + idLibro
       },
       headers: {
         'Content-Type': 'application/json'
@@ -41378,7 +41378,7 @@ var NuevoDetallePage = function NuevoDetallePage() {
       setLibros(response.entity._embedded.libros);
     });
   }, []);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Detalle"), /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Detalle de Libro"), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "autor"
@@ -41408,7 +41408,7 @@ var NuevoDetallePage = function NuevoDetallePage() {
     }, "(", libro.nombre, ")");
   })), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
-    value: "Nuevo Detalle"
+    value: "Nuevo Detalle de libro"
   })), /*#__PURE__*/React.createElement(Link, {
     to: "/"
   }, "Volver"));

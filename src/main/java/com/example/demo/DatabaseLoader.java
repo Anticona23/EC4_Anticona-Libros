@@ -36,24 +36,23 @@ public class DatabaseLoader implements CommandLineRunner {
 		this.repositoryM.save(new Autor("Mario Vargas Llosa"));
 
 
-		Autor mHarper = new Autor("Harper Lee");
+		Autor mHarper = new Autor("Harper");
 		this.repositoryM.save(mHarper);
 
-		Libro iPaz = new Libro("Gerra y Paz","1869","Editorial Santilla");
-		this.repositoryI.save(iPaz);
+		Libro iGuerrayPaz = new Libro("Gerra y Paz","1869","Santillal");
+		this.repositoryI.save(iGuerrayPaz);
 
-		Autor mTolkien = new Autor("Hernest Tolkine");
+		Autor mTolkien = new Autor("Tolkine");
 		this.repositoryM.save(mTolkien);
 
-		Libro iRebelion = new Libro("Rebelion de Atlas","1957", "Editorial Markes");
+		Libro iRebelion = new Libro("Rebelion","1957", "Editorial Markes");
 		this.repositoryI.save(iRebelion);
 
-		Biblioteca bIdat = new Biblioteca("Biblioteca Idat");
+		Biblioteca bIdat = new Biblioteca("Idat");
 		this.repositoryB.save(bIdat);
 
-		this.repositoryN.save(new Detalle(bIdat, mHarper, iPaz));
+		this.repositoryN.save(new Detalle(bIdat, mHarper, iGuerrayPaz));
 		this.repositoryN.save(new Detalle(bIdat, mTolkien, iRebelion));
-
 
 	}
 }

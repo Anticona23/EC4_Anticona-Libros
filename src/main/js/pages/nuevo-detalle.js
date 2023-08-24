@@ -11,7 +11,7 @@ const NuevoDetallePage = () => {
     const [libros, setLibros] = useState([])
     
     const [idAutor, setIdAutor] = useState('')
-    const [ifLibro, setIdLibro] = useState('')
+    const [idLibro, setIdLibro] = useState('')
 
     const handleSubmit = (evento)=>{
         evento.preventDefault();
@@ -19,9 +19,9 @@ const NuevoDetallePage = () => {
             method: 'POST',
             path: '/api/detalles',
             entity: {
-                banda: 'http://localhost:8080/api/bandas/'+id,
+                biblioteca: 'http://localhost:8080/api/bibliotecas/'+id,
                 autor: 'http://localhost:8080/api/autores/'+idAutor,
-                libro: 'http://localhost:8080/api/libros/'+ifLibro},
+                libro: 'http://localhost:8080/api/libros/'+idLibro},
             headers: {'Content-Type': 'application/json'}
         }).done(()=>{
            window.location = '/';
@@ -46,7 +46,7 @@ const NuevoDetallePage = () => {
 
     return (
         <>
-            <h1>Nuevo Detalle</h1>
+            <h1>Nuevo Detalle de Libro</h1>
             <form onSubmit={handleSubmit}>
 
                 <label htmlFor='autor'>Autor </label>
@@ -69,7 +69,7 @@ const NuevoDetallePage = () => {
                     })}
                 </select><br />
 
-                <input type="submit" value="Nuevo Detalle" />
+                <input type="submit" value="Nuevo Detalle de libro" />
 
             </form>
             <Link to="/">Volver</Link>
