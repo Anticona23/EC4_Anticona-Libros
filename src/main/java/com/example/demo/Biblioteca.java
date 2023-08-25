@@ -18,7 +18,6 @@ public class Biblioteca {
 		this.nombre = nombre;
 	}
 
-	
 
 	@Override
 	public boolean equals(Object o) {
@@ -34,7 +33,6 @@ public class Biblioteca {
 
 		return Objects.hash(id, nombre);
 	}
-
 
 	@Override
 	public String toString() {
@@ -59,5 +57,4 @@ public class Biblioteca {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
 }

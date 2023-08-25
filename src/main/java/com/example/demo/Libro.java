@@ -22,7 +22,6 @@ public class Libro {
 		this.editorial = editorial;
 	}
 
-
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -39,7 +38,6 @@ public class Libro {
 
 		return Objects.hash(id, nombre, año, editorial);
 	}
-
 
 	@Override
 	public String toString() {

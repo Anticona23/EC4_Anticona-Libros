@@ -45,7 +45,7 @@ const NuevoDetallePage = () => {
 
     return (
         <>
-            <h1>Nuevo Detalle de Libro</h1>
+            <h1>Nuevo Libro</h1>
             <form onSubmit={handleSubmit}>
 
                 <label htmlFor='autor'>Autor </label>
@@ -68,10 +68,10 @@ const NuevoDetallePage = () => {
                     })}
                 </select><br />
 
-                <input type="submit" value="Nuevo Detalle de libro" />
+                <input type="submit" formAction="/ver-biblioteca/1" value="Agregar" />
 
             </form>
-            <Link to="/">Volver</Link>
+            <Link to="/ver-biblioteca/1">Volver</Link>
         </>
     )
 }

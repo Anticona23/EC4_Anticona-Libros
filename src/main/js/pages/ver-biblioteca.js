@@ -23,7 +23,7 @@ const VerBibliotecaPage = () => {
 
     return (
         <>
-            <h1>Ver Biblioteca</h1>
+            <h1>Biblioteca</h1>
             <hr />
 
             <table border="1">
@@ -36,7 +36,7 @@ const VerBibliotecaPage = () => {
             </table>
             <hr />
 
-            <h2>Formación</h2>
+            <h2>Libros</h2>
 
             <table border="1">
                 <thead>
@@ -60,11 +60,10 @@ const VerBibliotecaPage = () => {
             </table>
 
             <hr />
-            <Link to={`/ver-biblioteca/${id}/nuevo-detalle`}>Nuevo Detalle</Link> |
-            <Link to="/ver-biblioteca">Volver</Link>
+            <Link to={`/ver-biblioteca/${id}/nuevo-detalle`}>Nuevo Libro</Link> |
+            <Link to="/">Volver</Link>
         </>
     )
-
 }
 
 module.exports = VerBibliotecaPage;

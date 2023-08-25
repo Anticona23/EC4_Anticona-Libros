@@ -29,19 +29,9 @@ class HomePage extends React.Component {
 
 				<div style={  {"width": "100%", "display": "flex"}   }>
 					<div style={{"width": "calc(100% / 3)"}}>
-						<Titulo entidad="Libros" emoji="🎸" />
-						<LibroList libros={this.state.libros} />
-						<Link to="/nuevo-libro">Nuevo Libro</Link>
-					</div>
-					<div style={{"width": "calc(100% / 3)"}}>
-						<Titulo entidad="Autores" emoji="🎶" />
-						<AutorList autores={this.state.autores} />
-						<Link to="/nuevo-autor">Nuevo Autor</Link>
-					</div>
-					<div style={{"width": "calc(100% / 3)"}}>
 						<Titulo entidad="Bibliotecas" emoji="👩🏼‍🎤" />
 						<BibliotecaList bibliotecas={this.state.bibliotecas} />
-						<Link to="/nueva-biblioteca">Nueva Biblioteca</Link>
+						
 					</div>
 				</div>
 

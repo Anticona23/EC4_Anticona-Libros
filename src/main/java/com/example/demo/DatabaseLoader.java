@@ -28,31 +28,34 @@ public class DatabaseLoader implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 
-		this.repositoryI.save(new Libro("Cien años de soledad", "1967", "Editorial Agilar"));
-		this.repositoryI.save(new Libro("Harry Potter","1997","Editorial Santilla"));
-		this.repositoryI.save(new Libro("Romeo y Julieta","1597","Editorial Alba"));
+		this.repositoryI.save(new Libro("La Cas Verde", "186", ".."));
+		this.repositoryI.save(new Libro("La guerra sin fin","1865",".."));
+		this.repositoryI.save(new Libro("Paco Yunque","1895",".."));
+		this.repositoryI.save(new Libro("Los heraldos negros","1895",".."));
+		this.repositoryI.save(new Libro("Escalas","1895",".."));
+		this.repositoryI.save(new Libro("Poemas humanos","1895",".."));
+		this.repositoryI.save(new Libro("La montallña azul","Percusión","."));
 
+		this.repositoryM.save(new Autor("Maria Arguedas"));
+		this.repositoryM.save(new Autor("Ricardo Palma"));
+		
 
-		this.repositoryM.save(new Autor("Mario Vargas Llosa"));
+		Libro iCachorros = new Libro("Los Cachorros","1985",".");
+		this.repositoryI.save(iCachorros);
+		
+		Libro iTrilce = new Libro("Trilce","1985", ".");
+		this.repositoryI.save(iTrilce);
 
+		Autor mLlosa = new Autor("Mario Vargas Llosa");
+		this.repositoryM.save(mLlosa);
 
-		Autor mHarper = new Autor("Harper");
-		this.repositoryM.save(mHarper);
+		Autor mVallejo = new Autor("Cesar vallejo");
+		this.repositoryM.save(mVallejo);
 
-		Libro iGuerrayPaz = new Libro("Gerra y Paz","1869","Santillal");
-		this.repositoryI.save(iGuerrayPaz);
-
-		Autor mTolkien = new Autor("Tolkine");
-		this.repositoryM.save(mTolkien);
-
-		Libro iRebelion = new Libro("Rebelion","1957", "Editorial Markes");
-		this.repositoryI.save(iRebelion);
-
-		Biblioteca bIdat = new Biblioteca("Idat");
+		Biblioteca bIdat = new Biblioteca("Biblioteca Idat");
 		this.repositoryB.save(bIdat);
 
-		this.repositoryN.save(new Detalle(bIdat, mHarper, iGuerrayPaz));
-		this.repositoryN.save(new Detalle(bIdat, mTolkien, iRebelion));
-
+		this.repositoryN.save(new Detalle(bIdat, mLlosa, iCachorros));
+		this.repositoryN.save(new Detalle(bIdat, mVallejo, iTrilce));
 	}
 }
