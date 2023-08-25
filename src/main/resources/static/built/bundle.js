@@ -41601,7 +41601,7 @@ var VerBibliotecaPage = function VerBibliotecaPage() {
   }))), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/ver-biblioteca/".concat(id, "/nuevo-detalle")
   }, "Nuevo Detalle"), " |", /*#__PURE__*/React.createElement(Link, {
-    to: "/"
+    to: "/ver-biblioteca"
   }, "Volver"));
 };
 module.exports = VerBibliotecaPage;

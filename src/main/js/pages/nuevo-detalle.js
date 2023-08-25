@@ -4,7 +4,6 @@ const { Link,useParams } = require('react-router-dom');
 const client = require('../client');
 
 const NuevoDetallePage = () => {
-
     let { id } = useParams();
 
     const [autores, setAutores] = useState([])
